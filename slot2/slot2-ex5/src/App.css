@@ -1,0 +1,56 @@
+.App {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  text-align: center;
+}
+
+/* 1. Hello React */
+.react-text {
+  color: blue;
+  font-weight: bold;
+}
+
+/* 2. Logo React */
+.logo-section {
+  margin: 20px 0;
+}
+
+.logo-caption {
+  font-size: 14px;
+  color: #555;
+}
+
+.App-logo {
+  width: 150px;
+  pointer-events: none;
+}
+
+/* 3. Navbar */
+.navbar {
+  background-color: #333;
+  padding: 10px;
+  margin: 20px 0;
+}
+
+.navbar a {
+  color: white;
+  padding: 8px 15px;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  background-color: #4CAF50;
+}
+
+/* 4. This is JSX */
+.jsx-text {
+  color: blue;
+  font-weight: bold;
+}
+
+/* 5. List */
+ul {
+  list-style: disc;
+  text-align: left;
+  display: inline-block;
+}
