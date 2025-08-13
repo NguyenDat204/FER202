@@ -1,0 +1,53 @@
+body {
+  background-color: #fdfdfb;
+  font-family: 'Inter', sans-serif;
+  padding-top: 80px;   /* Chiều cao Navbar */
+  padding-bottom: 80px; /* Chiều cao Footer */
+}
+
+.nav-link {
+  color: #333 !important;
+  font-weight: 500;
+}
+
+.nav-link:hover {
+  color: #234f38 !important;
+}
+
+.btn-success {
+  background-color: #234f38 !important;
+  border: none;
+}
+
+.btn-success:hover {
+  background-color: #1b3e2c !important;
+}
+
+.form-select, .form-control {
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+/* Giảm chiều cao tổng thể của filter để trông gọn hơn */
+.form-select, .form-control, .input-group-text {
+  height: 45px;
+  font-size: 0.95rem;
+}
+
+.nav-link {
+  color: #333 !important;
+  font-weight: 500;
+}
+
+.nav-link:hover {
+  color: #234f38 !important;
+}
+
+.btn-success {
+  background-color: #234f38 !important;
+  border: none;
+}
+
+.btn-success:hover {
+  background-color: #1b3e2c !important;
+}
