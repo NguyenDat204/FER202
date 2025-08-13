@@ -1,41 +1,37 @@
-import React from 'react';
-import { Navbar, Nav, Container, Button } from 'react-bootstrap';
+import React from "react";
+import { Navbar, Nav, Container, Button, Badge } from "react-bootstrap";
 
-function NavbarMenu() {
+function NavbarMenu({ favouritesCount, onOpenRequestForm }) {
   return (
-    <Navbar bg="white" expand="lg" fixed="top" className="border-bottom shadow-sm py-3">
-      <Container className="d-flex justify-content-between align-items-center position-relative">
-        {/* Logo bên trái */}
-        <div className="d-flex align-items-center">
-          <Navbar.Brand href="#" className="fw-bold text-success m-0">
-            <img src="/logo.png" alt="Logo" height="30" className="me-2" />
-            Healthy Recipe Finder
-          </Navbar.Brand>
-        </div>
+    <Navbar bg="light" expand="lg" fixed="top" className="py-3 shadow-sm">
+      <Container>
+        <Navbar.Brand href="#">
+          <img src="/logo.png" alt="Logo" height="30" className="me-2" />
+          Healthy Recipe Finder
+        </Navbar.Brand>
 
-        {/* Menu giữa màn hình */}
-        <div className="position-absolute start-50 translate-middle-x">
-          <Nav className="gap-4">
+        <Navbar.Toggle aria-controls="main-navbar" />
+        <Navbar.Collapse id="main-navbar">
+          <Nav className="mx-auto text-center">
             <Nav.Link href="#">Home</Nav.Link>
             <Nav.Link href="#">About</Nav.Link>
             <Nav.Link href="#">Recipes</Nav.Link>
+            <Nav.Link onClick={onOpenRequestForm}>Recipe Request Form</Nav.Link>
           </Nav>
-        </div>
 
-        {/* Nút bên phải */}
-        <div>
-          <Button
-            variant="success"
-            className="px-4"
-            style={{
-              borderRadius: '20px',
-              backgroundColor: '#234f38',
-              border: 'none'
-            }}
-          >
+          <Button variant="success" className="rounded-pill position-relative">
             Browse recipes
+            {favouritesCount > 0 && (
+              <Badge
+                bg="danger"
+                pill
+                className="position-absolute top-0 start-100 translate-middle"
+              >
+                {favouritesCount}
+              </Badge>
+            )}
           </Button>
-        </div>
+        </Navbar.Collapse>
       </Container>
     </Navbar>
   );
