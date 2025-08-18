@@ -1,0 +1,70 @@
+/* ====== GLOBAL ====== */
+body {
+  background-color: #f8f9fa; /* nền xám nhạt */
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+/* ====== HERO ====== */
+.hero {
+  background: linear-gradient(135deg, #0d6efd, #0dcaf0);
+  color: white;
+  padding: 60px 20px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+.hero h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+.hero p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+/* ====== FILTERS ====== */
+.filters-box {
+  border-radius: 10px;
+  background: white;
+  padding: 15px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+/* ====== SORT DROPDOWN ====== */
+.sort-box {
+  margin-bottom: 20px;
+}
+.sort-box select {
+  border-radius: 8px;
+}
+
+/* ====== STUDENT CARD ====== */
+.card {
+  border-radius: 12px !important;
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+.card img {
+  border-bottom: 1px solid #eee;
+}
+.card-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+/* ====== FOOTER ====== */
+footer {
+  background: #212529;
+  color: #bbb;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+}
+footer:hover {
+  color: white;
+}
