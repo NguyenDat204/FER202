@@ -107,7 +107,7 @@ function RecipesPage() {
   const [showRequestForm, setShowRequestForm] = useState(false);
 
   // Pagination
-  const [itemsPerPage, setItemsPerPage] = useState(6); // default 6
+  const [itemsPerPage, setItemsPerPage] = useState(6);
   const [currentPage, setCurrentPage] = useState(1);
 
   // On favourites change persist

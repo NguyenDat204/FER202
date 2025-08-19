@@ -3,16 +3,13 @@ import PropTypes from "prop-types";
 import { Button, Form, Toast, Modal, Card } from "react-bootstrap";
 
 function ProfileForm({ onSubmit }) {
-  // Khai báo state cho các input
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [age, setAge] = useState("");
 
-  // Quản lý Toast và Modal
   const [showToast, setShowToast] = useState(false);
   const [showModal, setShowModal] = useState(false);
 
-  // Validate dữ liệu
   const isValidName = name.trim() !== "";
   const isValidEmail = email.includes("@");
   const isValidAge = age && Number(age) >= 1;

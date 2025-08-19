@@ -24,9 +24,9 @@ function RecipeRequestForm({ show, onHide, onSuccess }) {
     if (form.checkValidity() === false) {
       e.stopPropagation();
     } else {
-      // ✅ Gọi toast từ parent
+      // Gọi toast từ parent
       if (onSuccess) {
-        onSuccess(`✅ Recipe request submitted for "${formData.ingredient}"`);
+        onSuccess(`Recipe request submitted for "${formData.ingredient}"`);
       }
 
       // Reset form
@@ -38,7 +38,7 @@ function RecipeRequestForm({ show, onHide, onSuccess }) {
         notes: ""
       });
 
-      onHide(); // đóng modal
+      onHide();
     }
 
     setValidated(true);
