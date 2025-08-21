@@ -1,5 +1,5 @@
 import React, { useReducer, useMemo, useCallback, useState } from "react";
-import { Modal, Button, Toast } from "react-bootstrap";
+import { Modal, Button, ProgressBar, Toast } from "react-bootstrap";
 import AboutForm from "./AboutForm";
 import AccountForm from "./AccountForm";
 import AddressForm from "./AddressForm";
@@ -38,6 +38,7 @@ function ProfileWizard({ show, onHide }) {
     const [submitted, setSubmitted] = useState(false);
 
     const totalSteps = 3;
+    const progress = useMemo(() => Math.round(((state.step + 1) / totalSteps) * 100), [state.step]);
 
     const isStepValid = useMemo(() => {
         if (state.step === 0) {
@@ -92,6 +93,7 @@ function ProfileWizard({ show, onHide }) {
                     <Modal.Title>Build Your Profile</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
+                    <ProgressBar now={progress} className="mb-3" />
                     {/* Tabs hiển thị bước */}
                     <div className="profile-tabs">
                         <button className={`profile-tab ${state.step === 0 ? "active" : ""}`}>About</button>
