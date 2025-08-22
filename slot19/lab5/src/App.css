@@ -1,0 +1,258 @@
+:root {
+  /* Light theme */
+  --bg-color: #f8f9fa;
+  --text-color: #212529;
+
+  --navbar-bg: #0d6efd;
+  --navbar-text: #ffffff;
+
+  --card-bg: #ffffff;
+  --card-text: #212529;
+
+  --btn-bg: #00b4d8;
+  --btn-text: #ffffff;
+
+  --badge-bg: #6c757d;
+
+  --input-bg: #ffffff;
+  --input-text: #212529;
+
+  --dropdown-bg: #ffffff;
+  --dropdown-text: #212529;
+
+  --link-hover: #00b4d8;
+}
+
+[data-theme="dark"] {
+  --bg-color: #0d1b2a;
+  --text-color: #f8f9fa;
+
+  --navbar-bg: #1b263b;
+  --navbar-text: #f8f9fa;
+
+  --card-bg: #1e1e1e;
+  --card-text: #f8f9fa;
+
+  --btn-bg: #0077b6;
+  --btn-text: #f8f9fa;
+
+  --badge-bg: #444;
+
+  --input-bg: #1e1e1e;
+  --input-text: #f8f9fa;
+
+  --dropdown-bg: #1b263b;
+  --dropdown-text: #f8f9fa;
+
+  --link-hover: #00b4d8;
+}
+
+/* Toàn site */
+html, body, #root {
+  height: 100%;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Navbar */
+.navbar {
+  background-color: var(--navbar-bg) !important;
+}
+.navbar .nav-link,
+.navbar .navbar-brand {
+  color: var(--navbar-text) !important;
+}
+.navbar .nav-link:hover {
+  color: var(--link-hover) !important;
+}
+
+/* Card */
+.card {
+  background-color: var(--card-bg) !important;
+  color: var(--card-text) !important;
+  border: none;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+  border: 1px solid var(--link-hover);
+}
+.card .card-title,
+.card .card-text {
+  color: var(--card-text) !important;
+}
+
+/* Product Card */
+.product-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* luôn full chiều cao của Col */
+  border-radius: 12px;
+  background-color: var(--card-bg) !important;
+  color: var(--card-text) !important;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+/* Ảnh */
+.product-card img {
+  height: 220px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 12px 12px 0 0;
+}
+
+/* Body */
+.product-card .card-body {
+  flex: 1; /* chiếm toàn bộ khoảng trống */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: var(--card-text) !important;
+}
+
+/* Nút */
+.product-card .btn {
+  margin-top: auto; /* đẩy nút xuống đáy card */
+}
+
+
+/* Buttons */
+.btn-primary,
+.btn-warning {
+  background: var(--btn-bg) !important;
+  color: var(--btn-text) !important;
+  border: none;
+}
+.btn-primary:hover,
+.btn-warning:hover {
+  opacity: 0.85;
+}
+
+/* Badge */
+.badge {
+  background-color: var(--badge-bg) !important;
+  color: #fff !important;
+}
+
+/* Input / Search bar */
+.form-control {
+  background-color: var(--input-bg) !important;
+  color: var(--input-text) !important;
+  border: 1px solid #ccc;
+}
+.form-control::placeholder {
+  color: var(--input-text);
+  opacity: 0.7;
+}
+
+/* Dropdown */
+.dropdown-menu {
+  background-color: var(--dropdown-bg);
+  color: var(--dropdown-text);
+}
+.dropdown-item {
+  color: var(--dropdown-text);
+}
+.dropdown-item:hover {
+  background-color: var(--link-hover);
+  color: #fff;
+}
+
+/* Carousel */
+.carousel-item img {
+  height: 600px;
+  object-fit: cover;
+  width: 100%;
+  border-radius: 12px;
+}
+@media (max-width: 768px) {
+  .carousel-item img {
+    height: 250px;
+  }
+  .product-card img {
+    height: 150px;
+  }
+}
+
+/* Footer */
+footer {
+  background-color: var(--navbar-bg);
+  color: var(--navbar-text);
+  padding: 20px;
+  text-align: center;
+}
+
+/* Offcanvas / Cart Sidebar */
+.offcanvas,
+.offcanvas-header,
+.offcanvas-body {
+  background-color: var(--card-bg) !important;
+  color: var(--card-text) !important;
+}
+
+.offcanvas .btn-close {
+  filter: invert(1); /* để nút X nhìn rõ trong dark mode */
+}
+
+/* Input placeholder (Search bar) */
+.form-control::placeholder {
+  color: var(--input-text) !important;
+  opacity: 0.8;
+}
+
+/* Table (Cart) */
+.table {
+  background-color: var(--card-bg) !important;
+  color: var(--card-text) !important;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.table th,
+.table td {
+  color: var(--card-text) !important;
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.table thead {
+  background-color: var(--navbar-bg) !important;
+  color: var(--navbar-text) !important;
+}
+
+.table tbody tr:hover {
+  background-color: rgba(0, 180, 216, 0.1); /* nhấn hover nhẹ */
+}
+
+/* Fix Table (Cart) */
+.table,
+.table tbody,
+.table tr,
+.table td,
+.table th {
+  background-color: var(--card-bg) !important;
+  color: var(--card-text) !important;
+}
+
+.table thead th {
+  background-color: var(--navbar-bg) !important;
+  color: var(--navbar-text) !important;
+}
+
+.table-striped > tbody > tr:nth-of-type(odd) > * {
+  background-color: var(--card-bg) !important;
+}
+
+.table-striped > tbody > tr:nth-of-type(even) > * {
+  background-color: var(--card-bg) !important;
+}
