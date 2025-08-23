@@ -3,7 +3,7 @@ import React, { createContext, useReducer, useMemo } from "react";
 export const FavouritesContext = createContext();
 
 const initialState = {
-  items: []   // ✅ luôn là array rỗng ban đầu
+  items: []
 };
 
 function favouritesReducer(state, action) {

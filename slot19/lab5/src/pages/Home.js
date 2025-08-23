@@ -6,8 +6,7 @@ const Home = () => {
   return (
     <Container>
       <AppCarousel />
-      <h2 className="mt-3">Welcome to React Shop</h2>
-      <p>Trang demo Lab5: Router, Context, Reducer, Favourites, Checkout…</p>
+      <h2 className="mt-3">Welcome to Dishes Shop</h2>
     </Container>
   );
 };

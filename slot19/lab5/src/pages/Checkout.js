@@ -39,13 +39,12 @@ const Checkout = () => {
     clearCart();
 
     // Điều hướng sang chi tiết đơn hàng
-    nav(`/orders/${newOrder.id}`);
+    nav(`/orders/${newOrder.id}`, { state: { success: true } });
   };
 
   return (
     <Container className="mt-4">
       <h2>Checkout</h2>
-      <p>Giả lập thanh toán ở đây…</p>
       <h5>Tổng: ${totalValue}</h5>
       <Button variant="success" onClick={handlePayment}>
         Pay now

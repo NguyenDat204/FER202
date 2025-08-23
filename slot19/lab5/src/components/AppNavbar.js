@@ -15,7 +15,7 @@ const AppNavbar = () => {
   return (
     <Navbar expand="lg" className="mb-3">
       <Container>
-        <Navbar.Brand as={Link} to="/">React Shop</Navbar.Brand>
+        <Navbar.Brand as={Link} to="/">Dishes Shop</Navbar.Brand>
         <Navbar.Toggle aria-controls="main-nav" />
         <Navbar.Collapse id="main-nav">
           <Nav className="me-auto">

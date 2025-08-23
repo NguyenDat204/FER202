@@ -1,10 +1,11 @@
 import React, { useContext } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link, useLocation } from "react-router-dom";
 import { OrderContext } from "../context/OrderContext";
-import { Table, Container, Button } from "react-bootstrap";
+import { Table, Container, Button, Alert } from "react-bootstrap";
 
 const OrderDetail = () => {
   const { id } = useParams();
+  const location = useLocation();
   const { orders } = useContext(OrderContext);
 
   const order = orders.find((o) => String(o.id) === String(id));
@@ -22,6 +23,11 @@ const OrderDetail = () => {
 
   return (
     <Container className="py-4">
+      {/* Alert chỉ hiện nếu có state.success */}
+      {location.state?.success && (
+        <Alert variant="success">Thanh toán thành công!</Alert>
+      )}
+
       <h2>Order #{order.id}</h2>
       <p>
         <strong>Date:</strong> {order.date}
