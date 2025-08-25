@@ -1,0 +1,10 @@
+body { margin: 0; }
+footer a { text-decoration: none; }
+
+.avatar-img {
+  width: 64px !important;  
+  height: 64px !important;
+  object-fit: cover;
+  border: 2px solid #ddd;
+  border-radius: 50%;
+}
