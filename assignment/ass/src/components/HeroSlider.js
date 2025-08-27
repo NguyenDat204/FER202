@@ -7,7 +7,7 @@ export default function HeroSlider() {
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src="/images/iphone15promax.jpg"
+          src="/images/slide1.jpg"
           alt="Hot deals on smartphones"
           style={{ maxHeight: "1000px", objectFit: "cover" }}
         />
@@ -20,7 +20,7 @@ export default function HeroSlider() {
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src="/images/iphone14.jpg"
+          src="/images/slide2.jpg"
           alt="New arrivals laptops"
           style={{ maxHeight: "500px", objectFit: "cover" }}
         />
@@ -33,7 +33,7 @@ export default function HeroSlider() {
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src="/images/iphone13mini.jpg"
+          src="/images/slide3.jpg"
           alt="Accessories and more"
           style={{ maxHeight: "500px", objectFit: "cover" }}
         />

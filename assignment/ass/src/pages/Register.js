@@ -26,30 +26,28 @@ export default function Register() {
   const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value })
 
   // xử lý avatar
-  // xử lý avatar
-const handleAvatar = (e) => {
-  const file = e.target.files[0];
-  if (!file) return;
-  if (!['image/jpeg', 'image/png'].includes(file.type)) {
-    toast.showToast('danger', 'Chỉ chấp nhận jpg hoặc png');
-    return;
-  }
-  if (file.size > 2 * 1024 * 1024) {
-    toast.showToast('danger', 'Ảnh ≤ 2MB');
-    return;
-  }
+  const handleAvatar = (e) => {
+    const file = e.target.files[0];
+    if (!file) return;
+    if (!['image/jpeg', 'image/png'].includes(file.type)) {
+      toast.showToast('danger', 'Chỉ chấp nhận jpg hoặc png');
+      return;
+    }
+    if (file.size > 2 * 1024 * 1024) {
+      toast.showToast('danger', 'Ảnh ≤ 2MB');
+      return;
+    }
 
-  const reader = new FileReader();
-  reader.onloadend = () => {
-    setForm({
-      ...form,
-      avatar: reader.result,        // lưu base64 string
-      avatarPreview: reader.result, // để preview luôn
-    });
+    const reader = new FileReader();
+    reader.onloadend = () => {
+      setForm({
+        ...form,
+        avatar: reader.result,        // lưu base64 string
+        avatarPreview: reader.result,
+      });
+    };
+    reader.readAsDataURL(file);
   };
-  reader.readAsDataURL(file);
-};
-
 
   // validate
   const validateStep1 = () => {

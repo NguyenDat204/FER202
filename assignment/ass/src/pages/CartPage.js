@@ -39,6 +39,7 @@ export default function CartPage() {
       </Table>
       <h4 className="text-end">Subtotal: {subtotal}</h4>
       <div className="text-end">
+        <Button as={Link} to="/">back</Button>
         <Button as={Link} to="/checkout" variant="success">Proceed to Checkout</Button>
       </div>
     </Container>
