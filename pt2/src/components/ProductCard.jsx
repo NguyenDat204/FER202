@@ -34,8 +34,8 @@ const ProductCard = ({ product }) => {
           <Button
             variant="outline-primary"
             size="sm"
-           
             className="flex-fill"
+            onClick={() => navigate(`/products/${product.id}`)}
           >
             <FaEye className="me-1" />
             View Details
